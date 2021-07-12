@@ -1,16 +1,16 @@
 {
-  "name": "react-floater",
-  "version": "0.7.2",
+  "name": "@foxford/react-floater",
+  "version": "1.0.0",
   "description": "Floaters everywhere!",
   "author": "Gil Barbara <gilbarbara@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gilbarbara/react-floater.git"
+    "url": "git+https://github.com/foxford/react-floater.git"
   },
   "bugs": {
-    "url": "https://github.com/gilbarbara/react-floater/issues"
+    "url": "https://github.com/foxford/react-floater/issues"
   },
-  "homepage": "https://github.com/gilbarbara/react-floater#readme",
+  "homepage": "https://github.com/foxford/react-floater#readme",
   "main": "lib/index.js",
   "module": "es/index.js",
   "files": [
@@ -31,8 +31,8 @@
   ],
   "license": "MIT",
   "peerDependencies": {
-    "react": "^15.0.0 || ^16.0.0",
-    "react-dom": "^15.0.0 || ^16.0.0",
+    "react": "^15.0.0 || ^16.0.0 || ^17.0.0",
+    "react-dom": "^15.0.0 || ^16.0.0 || ^17.0.0",
     "prop-types": "^15.7.2"
   },
   "dependencies": {
@@ -138,27 +138,14 @@
       "maxSize": "10 kB"
     }
   ],
-  "husky": {
-    "hooks": {
-      "post-merge": "node tools update",
-      "pre-commit": "node tools upstream && lint-staged && flow"
-    }
-  },
   "prettier": {
     "jsxBracketSameLine": false,
     "printWidth": 100,
     "singleQuote": true,
     "trailingComma": "all"
   },
-  "lint-staged": {
-    "*.js?(x)": [
-      "eslint --fix",
-      "git add",
-      "jest --findRelatedTests"
-    ],
-    "*.(js|jsx|json|yml|yaml|css|less|scss|ts|tsx|md|graphql|mdx)": [
-      "prettier --write",
-      "git add"
-    ]
+  "engines": {
+    "node": ">=14.x",
+    "npm": ">=7.x"
   }
 }
